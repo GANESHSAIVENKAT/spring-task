@@ -17,8 +17,6 @@ public class Runner {
 
 		for(String b: bean) {
 			System.out.println(b);
-			
-			
 		}
 
 		System.out.println(context.getBean(LaptopUser.class));
