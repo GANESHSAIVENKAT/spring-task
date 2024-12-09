@@ -1,0 +1,111 @@
+1.checked exceptions
+Exceptions that are checked at compile time.
+This type of exceptions are handled by programmer by using try catch block or throws method.
+IOexception
+SQLexception
+Filenotfound exception
+
+Unchecked Exceptions
+Exceptions that are not checked at compile time.
+this type of exceptions are not required to handle
+Arthematic Exceptions
+Nullpointer Exceptions
+------------------------------------------------------------------------------------------------------------
+2.Try-Catch Blocks are used to handle the exceptions
+tryblock: in this block we write the code related to what type of exception occurs 
+catchblock: this block is used to handle the type of exceptions 
+finally block: this block is used to runs the code always this is independent of try catch blocks.
+ 
+ Yes, a try block can exist without a catch block, but it must have a finally block.
+ 
+ public class Operation{
+ public static void main(String[] args){
+ try{
+ system.out.println("maths operation");
+ int result=10/0;
+ }
+ finally{
+ system.out.println("task done");
+ 
+ }
+ }
+ }
+ ---------------------------------------------------------------------------------------------------------
+ 4.PolyMorphism:polymorphism is defined as an object having many forms.
+ there are two types of polymorphism 
+ 1.compiletime polymorphism
+ 2.Runtime polymorphism
+ compile time polymorphism also known as methodoverloading
+ .public class Addition{
+ public int add(int a){
+ return a;
+ }
+  public int add(int a ,int b){
+ return a+b;
+ }
+   public int add(int a,int b,int c ){
+ return a+b+c;
+ }
+ 
+ }
+ 
+ public class AdditionRunner{
+ public static void main(String[] args){
+ 
+ Addition a=new Addition();
+ 
+  system.out.println(a.add(20));
+  system.out.println(a.add(20,30));
+  system.out.println(a.add(20,30,40));
+ }
+ }
+ Method overloading is nothing but having same method name but differ in parameters and also datatype.
+ 
+ 
+ RunTime PolyMorphism is also known as  MethodOverriding
+ this occurs when child class provides method which is already exist in parent class by "extends" child class with parent class
+ This method can be detected by mentioning @Ovverride annotation
+ example:
+ public class Furniture{
+ 
+ public void name(){
+  system.out.println("Furniture");
+ }
+ }
+ 
+  public class Table extends Furniture{
+ @Override
+ public void name(){
+  system.out.println("Table");
+ }
+ }
+
+ public class FurnitureRunner{
+ 
+ public static void main(String[] args){
+ 
+ Furniture f=new Table();
+ f.name();
+ 
+ }
+ }
+ ---------------------------------------------------------------------------------------------------------
+ 5.Abstraction : It is one of the main concept in Opps it says that process of hiding of unecessary details and 
+ showing the required information.
+ 
+ Using abstract Classes 
+ Abstract calss can contain both abstractmethods and non-abstractmethods
+ this occurs when all classes shares the common behaviour but it can have extra implimentations
+ Abstraction can be achieved by extendsthe Child class with Parent class and the common methods can be ovverriden and parent can have extra implementations 
+that are not necessary to be in child class.
+ 
+ Using Interfaces
+ In interfaces contain only abstract methods but not non-abstractmethods and from java8 defaultmethods are allowed
+ Here abstraction can be achieved by implementing the class with interfaces the methods can be overriden. 
+ -------------------------------------------------------------------------------------------------------------
+ HashMap is used to store key and values type of information which makes code effiency
+ for certain operations like read,insert,and delete
+ specifications:we can specify the specific key with value that makes more efficient
+ 2.for retriving data hash map makes more efficient.
+3.Here key  can be null i.e,only one but we can have many  null  for values
+4.data display will be not in order
